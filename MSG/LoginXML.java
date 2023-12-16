@@ -1,14 +1,12 @@
 package MSG;
-public class RegistrazioneXML {
+public class LoginXML {
     private String Nickname;
     private String Password;
-    private String ConfirmPassword;
 
-    public RegistrazioneXML(String nickname, String password, String confirmPassword)
+    public LoginXML(String nickname, String password)
     {
         Nickname = nickname;
         Password = password;
-        ConfirmPassword = confirmPassword;
     }
 
     public String getNickname() {
@@ -25,13 +23,5 @@ public class RegistrazioneXML {
 
     public void setPassword(String password) {
         Password = password;
-    }
-
-    public String getConfirmPassword() {
-        return ConfirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        ConfirmPassword = confirmPassword;
     }
 }

@@ -1,4 +1,5 @@
 package CostruzioneMSG;
+import MSG.LoginXML;
 import MSG.RegistrazioneXML;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -8,16 +9,16 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import MSG.MessaggioXML;
 
-public class CostruzioneRegistrazioneXML {
+public class CostruzioneLoginXML {
 
-    private RegistrazioneXML registrazione;
+    private LoginXML login;
     private static DocumentBuilderFactory docFactory;
     private static DocumentBuilder docBuilder;
     private static Boolean istanziato = false;
 
-    public CostruzioneRegistrazioneXML(String nickname, String password, String confirmPassword)
+    public CostruzioneLoginXML(String nickname, String password)
     {
-        registrazione = new RegistrazioneXML(nickname, password, confirmPassword);
+        login = new LoginXML(nickname, password);
         if(!istanziato)
         {
             try
@@ -44,16 +45,13 @@ public class CostruzioneRegistrazioneXML {
 
         // Add the type of message
         Element e = documento.createElement("Type");
-        e.setTextContent("register");
+        e.setTextContent("login");
         rootElement.appendChild(e);
         e = documento.createElement("Nickname");
-        e.setTextContent(registrazione.getNickname());
+        e.setTextContent(login.getNickname());
         rootElement.appendChild(e);
         e = documento.createElement("Password");
-        e.setTextContent(registrazione.getPassword());
-        rootElement.appendChild(e);
-        e = documento.createElement("ConfirmPassword");
-        e.setTextContent(registrazione.getConfirmPassword());
+        e.setTextContent(login.getPassword());
         rootElement.appendChild(e);
 
         //return the document object

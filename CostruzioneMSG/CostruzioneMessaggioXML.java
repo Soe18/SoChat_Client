@@ -38,12 +38,15 @@ public class CostruzioneMessaggioXML {
         //Create an xml object (Document)
         Document documento = docBuilder.newDocument();
         //Create the root element
-        Element rootElement = documento.createElement("ChatMessage");
+        Element rootElement = documento.createElement("SoChat");
         //Add the element to the xml document
         documento.appendChild(rootElement);
 
         //Add Content, Sender and Receiver to the ChatMessage element as children elements
-        Element e = documento.createElement("Content");
+        Element e = documento.createElement("Type");
+        e.setTextContent("message_forward");
+        rootElement.appendChild(e);
+        e = documento.createElement("Content");
         e.setTextContent(messaggio.getMessage());
         rootElement.appendChild(e);
         e = documento.createElement("Sender");
