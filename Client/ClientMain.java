@@ -44,7 +44,16 @@ public class ClientMain {
                 proxyClient.sendMsg(text, nickname, receiver);
             }
 
-            // client thread da creare dopo login e register in caso comunicazione andata a buon fine
+            if (header == 4) {
+                proxyClient.loadContacts(nickname);
+            }
+
+            if (header == 5) {
+                proxyClient.loadChat(nickname, "fabiano");
+            }
+
+            // 4 load contacts
+            // 5 load chat (current, requestedUser)
         }
     }
 }
