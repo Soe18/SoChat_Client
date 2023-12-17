@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo7.LogSignInController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="640.0" style="-fx-background-color: #78ffd6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Registrati">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                        <HBox prefWidth="640.0">
+                           <children>
+                              <AnchorPane prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+                                       <children>
+                                          <Label prefWidth="165.0" text="Nome Utente">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefWidth="320.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="60.0">
+                                       <children>
+                                          <MFXTextField fx:id="signinNickFld" floatMode="ABOVE" prefHeight="50.0" prefWidth="260.0" stylesheets="@materialfx/css/MFXTextField.css">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </MFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="640.0">
+                           <children>
+                              <AnchorPane prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+                                       <children>
+                                          <Label prefWidth="165.0" text="Password">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefWidth="320.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="60.0">
+                                       <children>
+                                          <MFXTextField fx:id="signinPassFld" floatMode="ABOVE" prefHeight="50.0" prefWidth="260.0" stylesheets="@materialfx/css/MFXTextField.css">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </MFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="640.0">
+                           <children>
+                              <AnchorPane prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="165.0" text="Ripeti Password">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefWidth="320.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="60.0">
+                                       <children>
+                                          <MFXTextField fx:id="signinRepassFld" floatMode="ABOVE" prefHeight="50.0" prefWidth="260.0" stylesheets="@materialfx/css/MFXTextField.css">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </MFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <MFXButton fx:id="signinBtn" buttonType="RAISED" depthLevel="LEVEL1" onAction="#onSignIn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #614991; -fx-font-size: 27;" stylesheets="@materialfx/css/MFXButton.css" text="Invia">
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="640.0" style="-fx-background-color: #0ad3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Accedi">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                        <HBox prefWidth="640.0">
+                           <children>
+                              <AnchorPane prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+                                       <children>
+                                          <Label prefWidth="165.0" text="Nome Utente">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefWidth="320.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <MFXTextField fx:id="loginNickFld" floatMode="ABOVE" prefHeight="50.0" prefWidth="260.0" stylesheets="@materialfx/css/MFXTextField.css">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </MFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="640.0">
+                           <children>
+                              <AnchorPane prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="165.0" text="Password">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefWidth="320.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <MFXTextField fx:id="loginPassFld" floatMode="ABOVE" prefHeight="50.0" prefWidth="260.0" stylesheets="@materialfx/css/MFXTextField.css">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </MFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <MFXButton fx:id="loginBtn" buttonType="RAISED" depthLevel="LEVEL1" onAction="#onLogIn" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #614991; -fx-font-size: 27;" stylesheets="@materialfx/css/MFXButton.css" text="Invia">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="114.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
